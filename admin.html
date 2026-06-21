@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrintLab Admin · Status Sync</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4gPGRlZnM+IDxsaW5lYXJHcmFkaWVudCBpZD0iYmcyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+IDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRUZCRDAiLz4gPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZGRkZEIi8+IDwvbGluZWFyR3JhZGllbnQ+IDwvZGVmcz4gPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9InVybCgjYmcyKSIvPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMiAzNCkgcm90YXRlKC01KSI+IDxyZWN0IHg9Ii0xMyIgeT0iLTE5IiB3aWR0aD0iMjYiIGhlaWdodD0iMzgiIHJ4PSIzLjUiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0YwODhBRSIgc3Ryb2tlLXdpZHRoPSIyLjYiLz4gPGNpcmNsZSBjeD0iMCIgY3k9Ii03IiByPSI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNGMDg4QUUiIHN0cm9rZS13aWR0aD0iMi42Ii8+IDxwYXRoIGQ9Ik0gLTEwIDE0IFEgLTEwIDIgMCAyIFEgMTAgMiAxMCAxNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjA4OEFFIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+IDwvZz4gPGcgZmlsbD0iI0YwODhBRSI+IDxwYXRoIGQ9Ik0gMTIgMTQgTCAxMy4yIDE3IEwgMTYgMTggTCAxMy4yIDE5IEwgMTIgMjIgTCAxMC44IDE5IEwgOCAxOCBMIDEwLjggMTcgWiIvPiA8cGF0aCBkPSJNIDUyIDQ4IEwgNTIuOCA1MCBMIDU0LjUgNTAuNSBMIDUyLjggNTEgTCA1MiA1MyBMIDUxLjIgNTEgTCA0OS41IDUwLjUgTCA1MS4yIDUwIFoiLz4gPC9nPiA8L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  :root {
+    --bg: #faf6f0;
+    --paper: #fffdf8;
+    --ink: #2a1f1a;
+    --ink-soft: #6b5d54;
+    --ink-softer: #a09188;
+    --accent: #e85a8c;
+    --accent-deep: #c4356b;
+    --accent-soft: rgba(232, 90, 140, 0.1);
+    --admin: #5a3f7a;
+    --admin-soft: rgba(90, 63, 122, 0.1);
+    --success: #4a9d6f;
+    --success-soft: rgba(74, 157, 111, 0.12);
+    --warn: #c4742b;
+    --warn-soft: rgba(196, 116, 43, 0.12);
+    --shadow: rgba(42, 31, 26, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(232, 90, 140, 0.06) 0%, transparent 35%),
+      radial-gradient(circle at 85% 80%, rgba(90, 63, 122, 0.06) 0%, transparent 35%);
+  }
+
+  .container { max-width: 620px; margin: 0 auto; }
+
+  .header { text-align: center; margin-bottom: 32px; }
+
+  .badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--admin);
+    background: var(--admin-soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  h1 .italic { font-style: italic; font-weight: 600; color: var(--accent); }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--paper);
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 24px var(--shadow), 0 1px 3px var(--shadow);
+    border: 1px solid rgba(42, 31, 26, 0.04);
+    margin-bottom: 16px;
+  }
+
+  .step-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--admin);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .step-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+
+  /* Drop zone */
+  .drop-zone {
+    background: var(--bg);
+    border: 2px dashed rgba(42, 31, 26, 0.15);
+    border-radius: 16px;
+    padding: 36px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .drop-zone:hover, .drop-zone.dragging {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .drop-zone.has-file {
+    border-style: solid;
+    border-color: var(--success);
+    background: var(--success-soft);
+  }
+  .drop-zone input[type="file"] {
+    position: absolute; inset: 0;
+    opacity: 0; cursor: pointer;
+  }
+
+  .drop-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 12px;
+    color: var(--accent);
+  }
+  .drop-zone.has-file .drop-icon { color: var(--success); }
+
+  .drop-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .drop-sub {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .file-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: 8px;
+    word-break: break-all;
+  }
+
+  /* Stats grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .stat-box {
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  /* Status breakdown */
+  .breakdown { margin-bottom: 18px; }
+  .breakdown-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    background: var(--bg);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .breakdown-row:last-child { margin-bottom: 0; }
+  .breakdown-name { color: var(--ink); font-weight: 500; }
+  .breakdown-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-deep);
+  }
+
+  /* Warnings */
+  .warnings { margin-bottom: 18px; }
+  .warn-box {
+    background: var(--warn-soft);
+    border: 1px solid rgba(196, 116, 43, 0.25);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .warn-box:last-child { margin-bottom: 0; }
+  .warn-box strong { color: var(--warn); font-weight: 600; display: block; margin-bottom: 2px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-family: 'JetBrains Mono', monospace; }
+  .warn-box .warn-detail { color: var(--ink-soft); }
+  .warn-box ul { margin: 6px 0 0 18px; color: var(--ink-soft); }
+  .warn-box li { margin-bottom: 2px; }
+
+  /* Download button */
+  .download-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .download-btn:hover { background: var(--accent-deep); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(232, 90, 140, 0.3); }
+  .download-btn.success { background: var(--success); }
+  .download-btn svg { width: 18px; height: 18px; }
+
+  /* Step 2 instructions */
+  .instr-list {
+    list-style: none;
+    counter-reset: step;
+  }
+  .instr-list li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 38px;
+    padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .instr-list li:last-child { padding-bottom: 0; }
+  .instr-list li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0; top: -2px;
+    width: 26px;
+    height: 26px;
+    background: var(--admin-soft);
+    color: var(--admin);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .instr-list code {
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--accent-deep);
+    font-weight: 500;
+  }
+  .instr-list a {
+    color: var(--accent-deep);
+    border-bottom: 1px dotted var(--accent-deep);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .instr-list a:hover { color: var(--accent); }
+
+  .hidden { display: none !important; }
+
+  .footer {
+    text-align: center;
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    color: var(--ink-softer);
+  }
+
+  .meta-notice {
+    background: var(--admin-soft);
+    border: 1px solid rgba(90, 63, 122, 0.15);
+    border-radius: 12px;
+    padding: 11px 14px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .meta-notice strong { color: var(--admin); font-weight: 600; }
+
+  /* Error */
+  .error-box {
+    background: rgba(196, 53, 107, 0.08);
+    border: 1px solid rgba(196, 53, 107, 0.2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  .error-box strong { color: var(--accent-deep); font-weight: 600; }
+
+  @media (max-width: 480px) {
+    body { padding: 22px 14px 50px; }
+    h1 { font-size: 36px; }
+    .card { padding: 24px 20px; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat-num { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">PrintLab · Admin</span>
+      <h1>sync <span class="italic">statuses</span></h1>
+      <p class="subtitle">Convert today's order tracker Excel into the data file your status page will read.</p>
+    </div>
+
+    <div class="meta-notice">
+      <strong>Staff only.</strong> Customers should never see this page. Bookmark it somewhere private.
+    </div>
+
+    <!-- STEP 1: Upload -->
+    <div class="card">
+      <div class="step-tag">Step 1</div>
+      <div class="step-title">Drop today's Excel file</div>
+
+      <div class="drop-zone" id="dropZone">
+        <svg class="drop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" id="dropIcon">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <div class="drop-title" id="dropTitle">Drop your .xlsx file here</div>
+        <div class="drop-sub" id="dropSub">or click to browse · expects Form Responses 1 + Order Tracker sheets</div>
+        <div class="file-name hidden" id="fileName"></div>
+        <input type="file" id="fileInput" accept=".xlsx,.xls" />
+      </div>
+
+      <div class="error-box hidden" id="errorBox"></div>
+    </div>
+
+    <!-- STEP 2: Preview + Download -->
+    <div class="card hidden" id="previewCard">
+      <div class="step-tag">Step 2</div>
+      <div class="step-title">Review and download</div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-num" id="statTotal">0</div>
+          <div class="stat-label">Total Orders</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statActive">0</div>
+          <div class="stat-label">In Progress</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" id="statDone">0</div>
+          <div class="stat-label">Completed</div>
+        </div>
+      </div>
+
+      <div class="breakdown" id="breakdown"></div>
+
+      <div class="warnings" id="warningsArea"></div>
+
+      <button class="download-btn" id="downloadBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Download data.json</span>
+      </button>
+    </div>
+
+    <!-- STEP 3: Commit instructions -->
+    <div class="card hidden" id="commitCard">
+      <div class="step-tag">Step 3</div>
+      <div class="step-title">Push to GitHub</div>
+
+      <ol class="instr-list">
+        <li>Open your status app's GitHub repo in a new tab.</li>
+        <li>Click <code>data.json</code> in the file list.</li>
+        <li>Click the pencil icon (✏️) to edit, then click <strong>"Replace file"</strong> or use the upload option in the file's "..." menu, and pick the <code>data.json</code> you just downloaded.</li>
+        <li>Scroll down → write a commit message like <code>daily sync — {today's date}</code> → click <strong>Commit changes</strong>.</li>
+        <li>Wait ~30 seconds for GitHub Pages to redeploy, then visit your status page. New statuses are live ✨</li>
+      </ol>
+    </div>
+
+    <div class="footer">
+      PrintLab Admin Tool · v1
+    </div>
+  </div>
+
+<script>
+  // ============ STATE ============
+  let parsedOrders = null;
+  let parseWarnings = [];
+
+  // ============ UTILITIES ============
+  function normalizeStr(s) {
+    return String(s == null ? '' : s).trim();
+  }
+  function normalizeOrderNum(v) {
+    if (v == null || v === '') return '';
+    let s = String(v).trim().replace(/^#/, '');
+    // Remove trailing .0 from float-parsed numbers
+    s = s.replace(/\.0+$/, '');
+    return s;
+  }
+  function normalizeEmail(v) {
+    return String(v == null ? '' : v).trim().toLowerCase();
+  }
+  function findColumn(headers, predicates) {
+    // predicates is an array of substrings; find first column whose header (lowercased) contains ANY of them
+    for (const h of headers) {
+      const hl = String(h).toLowerCase();
+      if (predicates.some(p => hl.includes(p))) return h;
+    }
+    return null;
+  }
+
+  // ============ PARSING ============
+  function parseWorkbook(workbook) {
+    const warnings = [];
+    const sheetNames = workbook.SheetNames;
+
+    // Locate the two sheets we need (flexible matching)
+    const formSheetName = sheetNames.find(n => /form/i.test(n) && /response/i.test(n)) || sheetNames.find(n => /form/i.test(n));
+    const trackSheetName = sheetNames.find(n => /tracker/i.test(n)) || sheetNames.find(n => /order tracker/i.test(n));
+
+    if (!formSheetName) throw new Error('Could not find a "Form Responses" sheet in this file.');
+    if (!trackSheetName) throw new Error('Could not find an "Order Tracker" sheet in this file.');
+
+    const formRows = XLSX.utils.sheet_to_json(workbook.Sheets[formSheetName], { defval: '', raw: false });
+    const trackRows = XLSX.utils.sheet_to_json(workbook.Sheets[trackSheetName], { defval: '', raw: false });
+
+    if (!formRows.length) throw new Error('Form Responses sheet has no rows.');
+    if (!trackRows.length) throw new Error('Order Tracker sheet has no rows.');
+
+    const formHeaders = Object.keys(formRows[0]);
+    const trackHeaders = Object.keys(trackRows[0]);
+
+    // Identify Form columns
+    // Order # in form is the column called "x" (a small number col next to Timestamp)
+    const formOrderCol = findColumn(formHeaders, ['\nx', ' x ']) || formHeaders.find(h => h.trim().toLowerCase() === 'x');
+    const formNameCol = formHeaders.find(h => h.trim().toLowerCase() === 'name') || findColumn(formHeaders, ['name']);
+    const emailLoginCol = formHeaders.find(h => h.toLowerCase().trim() === 'email address') || findColumn(formHeaders, ['email address']);
+    const emailConfCol = findColumn(formHeaders, ['email \nfor order', 'email\nfor order', 'order and payment confirmation', 'order and payment confirmations']);
+    const summaryCol = findColumn(formHeaders, ['paste your order summary', 'order summary']);
+
+    if (!formOrderCol) warnings.push({ type: 'Setup', msg: 'Could not locate the order number column ("x") in Form Responses. Defaulting to first numeric-ish column.' });
+
+    // Identify Tracker columns
+    const trackOrderCol = trackHeaders.find(h => h.toLowerCase().trim() === 'order') || findColumn(trackHeaders, ['order']);
+    const statusCol = findColumn(trackHeaders, ['order status', 'status']);
+    const courierCol = findColumn(trackHeaders, ['courier']);
+    const trackingCol = findColumn(trackHeaders, ['tracking number', 'tracking #', 'tracking']);
+    const paymentStatusCol = findColumn(trackHeaders, ['payment status']);
+
+    if (!trackOrderCol) throw new Error('Could not find an "Order" column in Order Tracker.');
+    if (!statusCol) warnings.push({ type: 'Setup', msg: 'Could not find "Order Status" column in Order Tracker — all orders will default to "Order Received".' });
+    if (!trackingCol) {
+      warnings.push({ type: 'Setup', msg: 'No "Tracking Number" column found in Order Tracker. J&T tracking numbers will be blank in the status page until you add one.' });
+    }
+
+    // Build a map of form rows keyed by order number
+    const formByOrder = {};
+    for (const r of formRows) {
+      const num = normalizeOrderNum(r[formOrderCol]);
+      if (!num) continue;
+      formByOrder[num] = r;
+    }
+
+    // Build orders from tracker
+    const orders = [];
+    const orphans = []; // tracker rows with no form match
+    const missingTracking = []; // J&T shipped but no tracking #
+    const seen = new Set();
+
+    for (const tr of trackRows) {
+      const num = normalizeOrderNum(tr[trackOrderCol]);
+      if (!num) continue;
+      if (seen.has(num)) {
+        warnings.push({ type: 'Duplicate', msg: `Order #${num} appears more than once in Order Tracker — only the first will be used.` });
+        continue;
+      }
+      seen.add(num);
+
+      const fr = formByOrder[num];
+      if (!fr) {
+        orphans.push(num);
+        continue;
+      }
+
+      const emails = [];
+      if (emailLoginCol) {
+        const e = normalizeEmail(fr[emailLoginCol]);
+        if (e) emails.push(e);
+      }
+      if (emailConfCol) {
+        const e = normalizeEmail(fr[emailConfCol]);
+        if (e && !emails.includes(e)) emails.push(e);
+      }
+      if (!emails.length) {
+        warnings.push({ type: 'No Email', msg: `Order #${num} has no email on file — customer won't be able to look it up.` });
+      }
+
+      const name = formNameCol ? normalizeStr(fr[formNameCol]) : '';
+      const details = summaryCol ? normalizeStr(fr[summaryCol]) : '';
+      const status = statusCol ? normalizeStr(tr[statusCol]) : '';
+      const courier = courierCol ? normalizeStr(tr[courierCol]) : '';
+      const tracking = trackingCol ? normalizeStr(tr[trackingCol]) : '';
+      const paymentStatus = paymentStatusCol ? normalizeStr(tr[paymentStatusCol]) : '';
+
+      // Flag J&T shipped orders without a tracking number
+      const isJT = /j&?\s*t/i.test(courier);
+      const isShippedOrLater = /shipped|completed/i.test(status);
+      if (isJT && isShippedOrLater && !tracking) {
+        missingTracking.push(num);
+      }
+
+      // Flag if payment status isn't paid yet for this order (warning, not exclude)
+      // (Not adding as a per-order warning — let the status field handle the customer messaging)
+
+      orders.push({
+        orderNumber: num,
+        customerName: name,
+        emails: emails,
+        orderDetails: details,
+        status: status,
+        courier: courier,
+        trackingNumber: tracking || null,
+        paymentStatus: paymentStatus || null
+      });
+    }
+
+    if (orphans.length) {
+      warnings.push({
+        type: 'Orphan Orders',
+        msg: `${orphans.length} order(s) in the tracker have no matching Form Response row (so no name/email):`,
+        items: orphans
+      });
+    }
+    if (missingTracking.length) {
+      warnings.push({
+        type: 'Missing Tracking',
+        msg: `${missingTracking.length} J&T order(s) are marked Shipped/Completed but have no tracking number:`,
+        items: missingTracking
+      });
+    }
+
+    return { orders, warnings };
+  }
+
+  // ============ RENDER PREVIEW ============
+  function renderPreview(orders, warnings) {
+    const total = orders.length;
+    const completed = orders.filter(o => /complete/i.test(o.status)).length;
+    const active = total - completed;
+
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statActive').textContent = active;
+    document.getElementById('statDone').textContent = completed;
+
+    // Status breakdown
+    const buckets = {};
+    for (const o of orders) {
+      const key = o.status || '(blank)';
+      buckets[key] = (buckets[key] || 0) + 1;
+    }
+    const sortedBuckets = Object.entries(buckets).sort((a, b) => b[1] - a[1]);
+    const breakdownEl = document.getElementById('breakdown');
+    if (sortedBuckets.length) {
+      breakdownEl.innerHTML = `
+        <div class="breakdown-title">Status Breakdown</div>
+        ${sortedBuckets.map(([name, count]) => `
+          <div class="breakdown-row">
+            <span class="breakdown-name">${escapeHtml(name)}</span>
+            <span class="breakdown-count">${count}</span>
+          </div>
+        `).join('')}
+      `;
+    } else {
+      breakdownEl.innerHTML = '';
+    }
+
+    // Warnings
+    const warnEl = document.getElementById('warningsArea');
+    if (warnings.length) {
+      warnEl.innerHTML = warnings.map(w => `
+        <div class="warn-box">
+          <strong>${escapeHtml(w.type)}</strong>
+          <div class="warn-detail">${escapeHtml(w.msg)}</div>
+          ${w.items ? `<ul>${w.items.slice(0, 12).map(it => `<li>Order #${escapeHtml(it)}</li>`).join('')}${w.items.length > 12 ? `<li>… and ${w.items.length - 12} more</li>` : ''}</ul>` : ''}
+        </div>
+      `).join('');
+    } else {
+      warnEl.innerHTML = `<div class="warn-box" style="background: var(--success-soft); border-color: rgba(74, 157, 111, 0.2);">
+        <strong style="color: var(--success);">All Clear</strong>
+        <div class="warn-detail">No data issues detected — ready to publish.</div>
+      </div>`;
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+
+  // ============ FILE HANDLING ============
+  function handleFile(file) {
+    const dropZone = document.getElementById('dropZone');
+    const errBox = document.getElementById('errorBox');
+    errBox.classList.add('hidden');
+
+    if (!file) return;
+    if (!/\.xlsx?$/i.test(file.name)) {
+      errBox.innerHTML = `<strong>Hmm.</strong> That doesn't look like an Excel file. Please drop a .xlsx file from your Google Sheets export.`;
+      errBox.classList.remove('hidden');
+      return;
+    }
+
+    document.getElementById('dropTitle').textContent = 'Parsing...';
+    document.getElementById('dropSub').textContent = 'Reading sheets, joining rows...';
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileName').classList.remove('hidden');
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = new Uint8Array(e.target.result);
+        const wb = XLSX.read(data, { type: 'array' });
+        const { orders, warnings } = parseWorkbook(wb);
+        parsedOrders = orders;
+        parseWarnings = warnings;
+
+        dropZone.classList.add('has-file');
+        document.getElementById('dropTitle').textContent = 'File loaded ✓';
+        document.getElementById('dropSub').textContent = `${orders.length} order${orders.length === 1 ? '' : 's'} parsed · drop a new file to re-load`;
+
+        renderPreview(orders, warnings);
+        document.getElementById('previewCard').classList.remove('hidden');
+        document.getElementById('commitCard').classList.add('hidden');
+        document.getElementById('downloadBtn').classList.remove('success');
+        document.getElementById('downloadBtn').querySelector('span').textContent = 'Download data.json';
+
+        document.getElementById('previewCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (err) {
+        console.error(err);
+        document.getElementById('dropTitle').textContent = 'Drop your .xlsx file here';
+        document.getElementById('dropSub').textContent = 'or click to browse · expects Form Responses 1 + Order Tracker sheets';
+        document.getElementById('fileName').classList.add('hidden');
+        dropZone.classList.remove('has-file');
+        errBox.innerHTML = `<strong>Couldn't parse this file.</strong> ${escapeHtml(err.message || err.toString())}`;
+        errBox.classList.remove('hidden');
+      }
+    };
+    reader.onerror = () => {
+      errBox.innerHTML = `<strong>Couldn't read the file.</strong> Try downloading the Excel again from Google Sheets.`;
+      errBox.classList.remove('hidden');
+    };
+    reader.readAsArrayBuffer(file);
+  }
+
+  // ============ DOWNLOAD ============
+  function downloadJSON() {
+    if (!parsedOrders) return;
+    // Strip paymentStatus from final output (not needed by customer app, but useful internally)
+    const cleanOrders = parsedOrders.map(o => ({
+      orderNumber: o.orderNumber,
+      customerName: o.customerName,
+      emails: o.emails,
+      orderDetails: o.orderDetails,
+      status: o.status,
+      courier: o.courier,
+      trackingNumber: o.trackingNumber
+    }));
+    const payload = {
+      lastUpdated: new Date().toISOString(),
+      orderCount: cleanOrders.length,
+      orders: cleanOrders
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    // Visual feedback + reveal step 3
+    const btn = document.getElementById('downloadBtn');
+    btn.classList.add('success');
+    btn.querySelector('span').textContent = 'Downloaded ✓ · Re-download';
+    document.getElementById('commitCard').classList.remove('hidden');
+    document.getElementById('commitCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ============ EVENT WIRING ============
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+
+    fileInput.addEventListener('change', (e) => {
+      const f = e.target.files[0];
+      if (f) handleFile(f);
+    });
+
+    ['dragenter', 'dragover'].forEach(ev => {
+      dropZone.addEventListener(ev, (e) => {
+        e.preventDefault(); e.stopPropagation();
+        dropZone.classList.add('dragging');
+      });
+    });
+    ['dragleave', 'drop'].forEach(ev => {
+      dropZone.addEventListener(ev, (e) => {
+        e.preventDefault(); e.stopPropagation();
+        dropZone.classList.remove('dragging');
+      });
+    });
+    dropZone.addEventListener('drop', (e) => {
+      const f = e.dataTransfer.files[0];
+      if (f) handleFile(f);
+    });
+
+    document.getElementById('downloadBtn').addEventListener('click', downloadJSON);
+  });
+</script>
+</body>
+</html>
