@@ -1,0 +1,702 @@
+{
+  "lastUpdated": "2026-06-22T17:41:21.638Z",
+  "orderCount": 62,
+  "orders": [
+    {
+      "orderNumber": "144",
+      "customerName": "Marielle D. Traviño",
+      "emails": [
+        "marielle.travino@gmail.com"
+      ],
+      "orderDetails": "Order for: Marielle D. Traviño\nDate: May 27, 2026 · 12:32 PM\n\n-- Items --\nVariation 1: 20x Double-sided Photocard @ P14.00/card = P280.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P280.00 (cards only, courier separate)\nTotal cards: 20\nTier savings: P13.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "145",
+      "customerName": "Trisha Sta. Maria",
+      "emails": [
+        "trishakyle.stamaria.med@ust.edu.ph",
+        "trishakylestamaria@gmail.com"
+      ],
+      "orderDetails": "Order for: Trisha Sta Maria\nDate: May 28, 2026 · 10:45 AM\n\n-- Items --\nVariation 1: 100x One-sided Photocard @ P5.00/card = P500.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P580.00\nTotal cards: 100\nTier savings: P166.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "146",
+      "customerName": "Zhannyl Cahido",
+      "emails": [
+        "zhannylmae@gmail.com"
+      ],
+      "orderDetails": "220",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "147",
+      "customerName": "Jazzpearl Custodio",
+      "emails": [
+        "tinc445@gmail.com"
+      ],
+      "orderDetails": "Order for: Jazzpearl Custodio\nDate: May 29, 2026 · 03:12 PM\n\n-- Items --\nVariation 1: 30x One-sided Photocard @ P5.00/card = P150.00\nVariation 2: 30x One-sided Photocard @ P5.00/card = P150.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P300.00 (cards only, courier separate)\nTotal cards: 60\nTier savings: P100.00 (vs. entry-tier pricing)\nMulti-variation discount: P60.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "148",
+      "customerName": "Matti David Valencia",
+      "emails": [
+        "sophiavalencia3024@gmail.com"
+      ],
+      "orderDetails": "580 w JT",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0018855132251"
+    },
+    {
+      "orderNumber": "149",
+      "customerName": "Erica Nicole Saljay",
+      "emails": [
+        "ericanicole.saljay.med@ust.edu.ph",
+        "ericasaljay@gmail.com"
+      ],
+      "orderDetails": "Order for: Erica Nicole Saljay\nDate: May 30, 2026 · 02:03 PM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P10.00/card = P150.00\nVariation 2: 20x One-sided Photocard @ P5.00/card = P100.00\nVariation 3: 20x One-sided Photocard @ P5.00/card = P100.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P430.00\nTotal cards: 55\nTier savings: P136.67 (vs. entry-tier pricing)\nMulti-variation discount: P130.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0018844173169"
+    },
+    {
+      "orderNumber": "150",
+      "customerName": "Maurice Rhienne E. Cala",
+      "emails": [
+        "mauricerhienneecala@gmail.com",
+        "riencala123@gmail.com"
+      ],
+      "orderDetails": "Order for: Maurice Rhienne E. Cala\nDate: Jun 1, 2026 · 10:38 AM\n\n-- Items --\nVariation 1: 25x One-sided Photocard @ P6.00/card = P150.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P230.00\nTotal cards: 25\nTier savings: P16.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0018854756209"
+    },
+    {
+      "orderNumber": "151",
+      "customerName": "Sandra Mae O. Perez",
+      "emails": [
+        "zndr.mae@gmail.com"
+      ],
+      "orderDetails": "Order for: Sandra Mae O. Perez\nDate: Jun 1, 2026 · 10:49 AM\n\n-- Items --\nVariation 1: 20x Double-sided Photocard @ P14.00/card = P280.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P280.00 (cards only, courier separate)\nTotal cards: 20\nTier savings: P13.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "152",
+      "customerName": "Lhorea M. Ricardo",
+      "emails": [
+        "lhorearicardo2003@gmail.com"
+      ],
+      "orderDetails": "Order for: Lhorea Ricardo\nDate: Jun 1, 2026 · 09:29 PM\n\n-- Items --\nVariation 1: 12x Standard Grad Print @ P5.00/card = P60.00\nVariation 2: 12x Standard Grad Print @ P5.00/card = P60.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P200.00\nTotal cards: 24\nTier savings: P24.00 (vs. entry-tier pricing)\nMulti-variation discount: P24.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0018857253877"
+    },
+    {
+      "orderNumber": "153",
+      "customerName": "Lereze Jane A. Cruz",
+      "emails": [
+        "lerezejane@gmail.com"
+      ],
+      "orderDetails": "Order for: Lereze Jane A. Cruz\nDate: Jun 2, 2026 · 02:33 PM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P11.00/card = P165.00\nVariation 2: 20x Standard Grad Print @ P4.50/card = P90.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P335.00\nTotal cards: 35\nTier savings: P85.00 (vs. entry-tier pricing)\nMulti-variation discount: P75.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019041004170"
+    },
+    {
+      "orderNumber": "154",
+      "customerName": "Ricardo Jose Maria P. Rivera",
+      "emails": [
+        "ricorvra@gmail.com"
+      ],
+      "orderDetails": "Order for: Ricardo Rivera\nDate: Jun 2, 2026 · 03:57 PM\n\n-- Items --\nVariation 1: 27x Double-sided Photocard @ P12.67/card = P342.00\n   + Sleeves (27 x P1) = P27.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P449.00\nTotal cards: 27\nTier savings: P54.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019047245064"
+    },
+    {
+      "orderNumber": "155",
+      "customerName": "Jessica Pilac",
+      "emails": [
+        "jessicaannnico4@gmail.com"
+      ],
+      "orderDetails": "Order for: Jessica\nDate: Jun 2, 2026 · 06:01 PM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P14.67/card = P220.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P300.00\nTotal cards: 15",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019046314630"
+    },
+    {
+      "orderNumber": "156",
+      "customerName": "Jose Marquez",
+      "emails": [
+        "marquezjoseemmanuel.142004@gmail.com",
+        "marquez.joseemmanuel.qm@gmail.com"
+      ],
+      "orderDetails": "Order for: Jose Marquez\nDate: Jun 2, 2026 · 06:16 PM\n\n-- Items --\nVariation 1: 18x Double-sided Photocard @ P11.00/card = P198.00\n   + Sleeves (18 x P1) = P18.00\nVariation 2: 4x Double-sided Photocard @ P11.00/card = P44.00\n   + Sleeves (4 x P1) = P4.00\nVariation 3: 10x Standard Grad Print @ P4.50/card = P45.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P389.00\nTotal cards: 32\nTier savings: P95.67 (vs. entry-tier pricing)\nMulti-variation discount: P83.67 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019154115911"
+    },
+    {
+      "orderNumber": "157",
+      "customerName": "J-M S Ramoran",
+      "emails": [
+        "sadulangjm@gmail.com"
+      ],
+      "orderDetails": "220",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "158",
+      "customerName": "Rasheed Albel",
+      "emails": [
+        "albelrasheed@gmail.com"
+      ],
+      "orderDetails": "Order for: Rasheed Albel\nDate: Jun 3, 2026 · 12:55 PM\n\n-- Items --\nVariation 1: 55x Double-sided Photocard @ P10.00/card = P550.00\n   + Sleeves (55 x P1) = P55.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P685.00\nTotal cards: 55\nTier savings: P256.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019038923354"
+    },
+    {
+      "orderNumber": "159",
+      "customerName": "Arabella Garcia",
+      "emails": [
+        "thearabellag@gmail.com"
+      ],
+      "orderDetails": "Order for: Arabella Garcia\nDate: Jun 3, 2026 · 08:00 AM\n\n-- Items --\nVariation 1: 15x One-sided Photocard @ P6.67/card = P100.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P180.00\nTotal cards: 15",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019045454478"
+    },
+    {
+      "orderNumber": "160",
+      "customerName": "Anne Lazares",
+      "emails": [
+        "queanne10@gmail.com"
+      ],
+      "orderDetails": "Order for: anne\nDate: Jun 6, 2026 · 04:52 PM\n\n-- Items --\nVariation 1: 15x One-sided Photocard @ P6.67/card = P100.00\n\nShipping: J&T · Luzon (outside NCR): P120.00\n\nTOTAL: P220.00\nTotal cards: 15",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019259641772"
+    },
+    {
+      "orderNumber": "161",
+      "customerName": "Shanna Janelle Gorillo",
+      "emails": [
+        "shannagorillo.17@gmail.com"
+      ],
+      "orderDetails": "Order for: Shanna Janelle Gorillo\nDate: Jun 7, 2026 · 03:23 PM\n\n-- Items --\nVariation 1: 10x One-sided Photocard @ P6.67/card = P66.67\n   + Sleeves (10 x P1) = P10.00\nVariation 2: 5x One-sided Photocard @ P6.67/card = P33.33\n   + Sleeves (5 x P1) = P5.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P195.00\nTotal cards: 15",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019258957952"
+    },
+    {
+      "orderNumber": "162",
+      "customerName": "Sofia Irene Rozul",
+      "emails": [
+        "rozulsofiairene@gmail.com"
+      ],
+      "orderDetails": "Order for: Sofia Irene M. Rozul\nDate: Jun 7, 2026 · 07:10 PM\n\n-- Items --\nVariation 1: 70x One-sided Photocard @ P5.00/card = P350.00\n   + Sleeves (70 x P1) = P70.00\nVariation 2: 25x One-sided Photocard @ P5.00/card = P125.00\n\nShipping: J&T · Luzon (outside NCR): P120.00\n\nTOTAL: P665.00\nTotal cards: 95\nTier savings: P158.33 (vs. entry-tier pricing)\nMulti-variation discount: P25.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019261331227"
+    },
+    {
+      "orderNumber": "163",
+      "customerName": "Polyn A. Shih",
+      "emails": [
+        "polynashih@gmail.com"
+      ],
+      "orderDetails": "Order for: Polyn Shih\nDate: Jun 7, 2026 · 09:07 PM\n\n-- Items --\nVariation 1: 20x Double-sided Photocard @ P14.00/card = P280.00\n   + Sleeves (20 x P1) = P20.00\n\nRush order (20 cards): P100.00\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P480.00\nTotal cards: 20\nTier savings: P13.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "164",
+      "customerName": "Therese Francine Lo",
+      "emails": [
+        "theresefrancinelo@gmail.com",
+        "theresefrancine.lo.med@ust.edu.ph"
+      ],
+      "orderDetails": "Order for: Therese Francine Lo\nDate: Jun 9, 2026 · 02:13 PM\n\n-- Items --\nVariation 1: 75x Standard Grad Print @ P4.00/card = P300.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P380.00\nTotal cards: 75\nTier savings: P150.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019354176938"
+    },
+    {
+      "orderNumber": "165",
+      "customerName": "Ariane Ortiguerra",
+      "emails": [
+        "ariane12ortiguerra@gmail.com"
+      ],
+      "orderDetails": "170",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019354672931"
+    },
+    {
+      "orderNumber": "166",
+      "customerName": "Rosheen Eli M. Reyes",
+      "emails": [
+        "rosheenreyes14@gmail.com"
+      ],
+      "orderDetails": "220 (I will book my own lala move po)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "167",
+      "customerName": "Karl Orogan",
+      "emails": [
+        "karlorogan12@gmail.com"
+      ],
+      "orderDetails": "Order for: Karl Orogan\nDate: Jun 11, 2026 · 02:21 AM\n\n-- Items --\nVariation 1: 15x One-sided Photocard @ P5.00/card = P75.00\nVariation 2: 30x One-sided Photocard @ P5.00/card = P150.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P305.00\nTotal cards: 45\nTier savings: P75.00 (vs. entry-tier pricing)\nMulti-variation discount: P55.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "168",
+      "customerName": "Beatrx Magdaraog",
+      "emails": [
+        "beatrx.magdaraog.educ@ust.edu.ph",
+        "beatrxmagdaraog@gmail.com"
+      ],
+      "orderDetails": "Order for: Beatrx A. Magdaraog\nDate: Jun 11, 2026 · 09:32 PM\n\n-- Items --\nVariation 1: 80x One-sided Photocard @ P5.00/card = P400.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P400.00 (cards only, courier separate)\nTotal cards: 80\nTier savings: P133.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "169",
+      "customerName": "Beatrx Magdaraog",
+      "emails": [
+        "beatrx.magdaraog.educ@ust.edu.ph",
+        "beatrxmagdaraog@gmail.com"
+      ],
+      "orderDetails": "Order for: Beatrx A. Magdaraog\nDate: Jun 11, 2026 · 10:20 PM\n\n-- Items --\nVariation 1: 110x One-sided Photocard @ P5.00/card = P550.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P550.00 (cards only, courier separate)\nTotal cards: 110\nTier savings: P183.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "170",
+      "customerName": "Beatrx Magdaraog",
+      "emails": [
+        "beatrx.magdaraog.educ@ust.edu.ph",
+        "beatrxmagdaraog@gmail.com"
+      ],
+      "orderDetails": "Order for: Beatrx Magdaraog\nDate: Jun 12, 2026 · 07:21 AM\n\n-- Items --\nVariation 1: 10x Double-sided Photocard @ P10.00/card = P100.00\nVariation 2: 80x One-sided Photocard @ P5.00/card = P400.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P500.00 (cards only, courier separate)\nTotal cards: 90\nTier savings: P180.00 (vs. entry-tier pricing)\nMulti-variation discount: P46.67 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "171",
+      "customerName": "Jerine Kyel T. Tolentino",
+      "emails": [
+        "jerinekyelttolentino@gmail.com"
+      ],
+      "orderDetails": "Order for: Jerine Kyel Tolentino\nDate: Jun 13, 2026 · 08:41 PM\n\n-- Items --\nVariation 1: 70x One-sided Photocard @ P5.00/card = P350.00\nVariation 2: 30x One-sided Photocard @ P5.00/card = P150.00\n\nRush order (100 cards): P300.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P800.00 (cards only, courier separate)\nTotal cards: 100\nTier savings: P166.67 (vs. entry-tier pricing)\nMulti-variation discount: P30.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "172",
+      "customerName": "Carla Alexandra Castillo",
+      "emails": [
+        "carlaalexandracastillo@gmail.com"
+      ],
+      "orderDetails": "Order for: Carla Alexandra Castillo\nDate: Jun 13, 2026 · 10:27 PM\n\n-- Items --\nVariation 1: 40x Standard Grad Print @ P4.50/card = P180.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P180.00 (cards only, courier separate)\nTotal cards: 40\nTier savings: P60.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "173",
+      "customerName": "Maritoni Valenton",
+      "emails": [
+        "mvalenton10@gmail.com"
+      ],
+      "orderDetails": "Order for: Maritoni\nDate: Jun 14, 2026 · 01:20 PM\n\n-- Items --\nVariation 1: 40x Double-sided Photocard @ P10.00/card = P400.00\n   + Sleeves (40 x P1) = P40.00\nVariation 2: 40x Double-sided Photocard @ P10.00/card = P400.00\n   + Sleeves (40 x P1) = P40.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P880.00 (cards only, courier separate)\nTotal cards: 80\nTier savings: P373.33 (vs. entry-tier pricing)\nMulti-variation discount: P80.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "174",
+      "customerName": "Valerie Ponce",
+      "emails": [
+        "reemponce0930@gmail.com"
+      ],
+      "orderDetails": "Order for: Valerie Pomce\nDate: Jun 14, 2026 · 04:10 PM\n\n-- Items --\nVariation 1: 25x One-sided Photocard @ P6.00/card = P150.00\n   + Sleeves (25 x P1) = P25.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P255.00\nTotal cards: 25\nTier savings: P16.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "175",
+      "customerName": "Kirk T. Morabe",
+      "emails": [
+        "ktmorabe@up.edu.ph",
+        "kirkmorabe1604@gmail.com"
+      ],
+      "orderDetails": "Order for: Kirk T. Morabe\nDate: Jun 14, 2026 · 07:44 PM\n\n-- Items --\nVariation 1: 20x Double-sided Photocard @ P10.00/card = P200.00\n   + Sleeves (20 x P1) = P20.00\nVariation 2: 20x Double-sided Photocard @ P10.00/card = P200.00\n   + Sleeves (20 x P1) = P20.00\nVariation 3: 20x Double-sided Photocard @ P10.00/card = P200.00\n   + Sleeves (20 x P1) = P20.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P740.00\nTotal cards: 60\nTier savings: P280.00 (vs. entry-tier pricing)\nMulti-variation discount: P240.00 saved",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019772286108"
+    },
+    {
+      "orderNumber": "176",
+      "customerName": "Jamillah R. Narido",
+      "emails": [
+        "jamillah.narido0305@gmail.com"
+      ],
+      "orderDetails": "Order for: Jamillah Narido\nDate: Jun 14, 2026 · 08:13 PM\n\n-- Items --\nVariation 1: 40x Double-sided Photocard @ P11.00/card = P440.00\n   + Sleeves (40 x P1) = P40.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P560.00\nTotal cards: 40\nTier savings: P146.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019765626719"
+    },
+    {
+      "orderNumber": "177",
+      "customerName": "Mellissa Jewel Magday",
+      "emails": [
+        "mjmagday91@gmail.com"
+      ],
+      "orderDetails": "Order for: Mellissa Jewel Magday\nDate: Jun 14, 2026 · 10:29 PM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.50/card = P220.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P220.00 (cards only, courier separate)\nTotal cards: 40\nTier savings: P46.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "178",
+      "customerName": "Maritoni Valenton",
+      "emails": [
+        "mvalenton10@gmail.com"
+      ],
+      "orderDetails": "Order for: Maritoni\nDate: Jun 15, 2026 · 06:23 PM\n\n-- Items --\nVariation 1: 40x Double-sided Photocard @ P11.00/card = P440.00\n   + Sleeves (40 x P1) = P40.00\n\nShipping: J&T · Luzon (outside NCR): P120.00\n\nTOTAL: P600.00\nTotal cards: 40\nTier savings: P146.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019756602493"
+    },
+    {
+      "orderNumber": "179",
+      "customerName": "Raynne Avrielle Par",
+      "emails": [
+        "raynne.avrielle24@gmail.com"
+      ],
+      "orderDetails": "Order for: Raynne Avrielle C. Par\nDate: Jun 16, 2026 · 10:37 AM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.50/card = P220.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P300.00\nTotal cards: 40\nTier savings: P46.67 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019771496678"
+    },
+    {
+      "orderNumber": "180",
+      "customerName": "Leah Camille Sasi",
+      "emails": [
+        "camillesasi5678@gmail.com"
+      ],
+      "orderDetails": "60 x 5 : 300 PHOTO\n60 x 2 : 120 RUSH",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "181",
+      "customerName": "Giusepppe Tidon",
+      "emails": [
+        "gbt.pcsi@gmail.com"
+      ],
+      "orderDetails": "Order for: Giuseppe Tidon\nDate: Jun 17, 2026 · 09:47 AM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P14.67/card = P220.00\n   + Sleeves (15 x P1) = P15.00\n\nRush order (15 cards): P45\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P280.00\nTotal cards: 15",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "182",
+      "customerName": "nonalyn joye esquilona",
+      "emails": [
+        "nonalynesquilona5@gmail.com"
+      ],
+      "orderDetails": "150",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "183",
+      "customerName": "Morris",
+      "emails": [
+        "morrismananguite@gmail.com"
+      ],
+      "orderDetails": "Order for: Morris\nDate: Jun 17, 2026 · 07:52 PM\n\n-- Items --\nVariation 1: 60x One-sided Photocard @ P5.00/card = P300.00\nVariation 2: 40x Double-sided Photocard @ P10.00/card = P400.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P700.00 (cards only, courier separate)\nTotal cards: 100\nTier savings: P286.67 (vs. entry-tier pricing)\nMulti-variation discount: P40.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "184",
+      "customerName": "Jade Connery Ramos",
+      "emails": [
+        "jaderamos4317@gmail.com"
+      ],
+      "orderDetails": "Order for: Jade Connery Ramos\nDate: Jun 17, 2026 · 07:58 PM\n\n-- Items --\nVariation 1: 48x Double-sided Photocard @ P10.00/card = P480.00\nVariation 2: 1x Double-sided Photocard @ P10.00/card = P10.00\nVariation 3: 1x Double-sided Photocard @ P10.00/card = P10.00\n   + Sleeves (1 x P1) = P1.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P501.00 (cards only, courier separate)\nTotal cards: 50\nTier savings: P233.33 (vs. entry-tier pricing)\nMulti-variation discount: P9.33 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "185",
+      "customerName": "Mikaela Gabrielle Umali",
+      "emails": [
+        "mikaela.umali@student.ateneo.edu"
+      ],
+      "orderDetails": "Order for: Mikaela Umali\nDate: Jun 17, 2026 · 08:56 PM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.00/card = P200.00\nVariation 2: 30x One-sided Photocard @ P5.00/card = P150.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P430.00\nTotal cards: 70\nTier savings: P116.67 (vs. entry-tier pricing)\nMulti-variation discount: P50.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "186",
+      "customerName": "Mikaela Merioles",
+      "emails": [
+        "mikaela.merioles@student.ateneo.edu"
+      ],
+      "orderDetails": "Order for: Mikaela Selma R. Merioles\nDate: Jun 17, 2026 · 10:57 PM\n\n-- Items --\nVariation 1: 50x One-sided Photocard @ P5.00/card = P250.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P250.00 (cards only, courier separate)\nTotal cards: 50\nTier savings: P83.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "187",
+      "customerName": "Anne Clarise Flores",
+      "emails": [
+        "anneclarise30@gmail.com"
+      ],
+      "orderDetails": "180",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "188",
+      "customerName": "Joanne C. Tamondong",
+      "emails": [
+        "joannetamondong21@gmail.com"
+      ],
+      "orderDetails": "Order for: Joanne C. Tamondong\nDate: Jun 18, 2026 · 12:24 PM\n\n-- Items --\nVariation 1: 20x Double-sided Photocard @ P14.00/card = P280.00\n   + Sleeves (20 x P1) = P20.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P380.00\nTotal cards: 20\nTier savings: P13.33 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019773715947"
+    },
+    {
+      "orderNumber": "189",
+      "customerName": "JULIANA JEI L. DATUON",
+      "emails": [
+        "julianadatuon20@gmail.com"
+      ],
+      "orderDetails": "Order for: Juliana Jei Datuon\nDate: Jun 18, 2026 · 04:36 PM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.00/card = P200.00\nVariation 2: 50x One-sided Photocard @ P5.00/card = P250.00\nVariation 3: 40x One-sided Photocard @ P5.00/card = P200.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P650.00 (cards only, courier separate)\nTotal cards: 130\nTier savings: P216.67 (vs. entry-tier pricing)\nMulti-variation discount: P40.00 saved",
+      "status": "Printing",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "190",
+      "customerName": "Estella Calica",
+      "emails": [
+        "calica344@gmail.com",
+        "calica344@gmail.con"
+      ],
+      "orderDetails": "340",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "191",
+      "customerName": "JULIANA JEI L. DATUON",
+      "emails": [
+        "julianadatuon20@gmail.com"
+      ],
+      "orderDetails": "Order for: Juliana Jei Datuon\nDate: Jun 18, 2026 · 04:47 PM\n\n-- Items --\nVariation 1: 30x One-sided Photocard @ P5.00/card = P150.00\nVariation 2: 40x One-sided Photocard @ P5.00/card = P200.00\nVariation 3: 20x One-sided Photocard @ P5.00/card = P100.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P450.00 (cards only, courier separate)\nTotal cards: 90\nTier savings: P150.00 (vs. entry-tier pricing)\nMulti-variation discount: P80.00 saved",
+      "status": "Printing",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "192",
+      "customerName": "Miyu Jangcan",
+      "emails": [
+        "miyujangcan8@gmail.com"
+      ],
+      "orderDetails": "Order for: Miyu Jangcan\nDate: Jun 18, 2026 · 05:41 PM\n\n-- Items --\nVariation 1: 30x Double-sided Photocard @ P12.67/card = P380.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P460.00\nTotal cards: 30\nTier savings: P60.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "J&T",
+      "trackingNumber": "JT0019776999559"
+    },
+    {
+      "orderNumber": "193",
+      "customerName": "Aly Carlota",
+      "emails": [
+        "alyssa.carlota@student.ateneo.edu",
+        "aly.carlota26@gmail.com"
+      ],
+      "orderDetails": "Order for: Aly Carlota\nDate: Jun 18, 2026 · 08:27 PM\n\n-- Items --\nVariation 1: 60 x Standard Grad Print @ P4.00/card = P240.00\n\nRush order (50 cards): P90.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P330.00 (cards only, courier separate)\nTotal cards: 60",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "194",
+      "customerName": "Arianne Santiago",
+      "emails": [
+        "ariannesantiago.111@gmail.com"
+      ],
+      "orderDetails": "Order for: Arianne Santiago\nDate: Jun 18, 2026 · 08:37 PM\n\n-- Items --\nVariation 1: 30x One-sided Photocard @ P6.00/card = P180.00\n\nRush order (30 cards): P100.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P280.00 (cards only, courier separate)\nTotal cards: 30\nTier savings: P20.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "195",
+      "customerName": "Dominic Mercurio",
+      "emails": [
+        "dsmercurio19@gmail.com"
+      ],
+      "orderDetails": "Order for: Dominic Mercurio\nDate: Jun 19, 2026 · 12:52 AM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P10.00/card = P150.00\n   + Sleeves (15 x P1) = P15.00\nVariation 2: 15x Double-sided Photocard @ P10.00/card = P150.00\n   + Sleeves (15 x P1) = P15.00\nVariation 3: 15x Double-sided Photocard @ P10.00/card = P150.00\n   + Sleeves (15 x P1) = P15.00\n\nRush order (45 cards): P135.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P630.00 (cards only, courier separate)\nTotal cards: 45\nTier savings: P210.00 (vs. entry-tier pricing)\nMulti-variation discount: P210.00 saved",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "196",
+      "customerName": "Rutheni Redoble",
+      "emails": [
+        "rthnrdbl@gmail.com"
+      ],
+      "orderDetails": "Order for: Ruth\nDate: Jun 22, 2026 · 10:13 AM\n\n-- Items --\nVariation 1: 30x One-sided Photocard @ P6.00/card = P180.00\n   + Sleeves (30 x P1) = P30.00\n\nRush order (30 cards @ P2/card): P60.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P270.00 (cards only, courier separate)\nTotal cards: 30\nTier savings: P20.00 (vs. entry-tier pricing)",
+      "status": "Order Completed",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "197",
+      "customerName": "Pauline Joy Evangelista",
+      "emails": [
+        "joy2mogol@gmail.com"
+      ],
+      "orderDetails": "Order for: Pauline Joy Evangelista\nDate: Jun 22, 2026 · 02:25 PM\n\n-- Items --\nVariation 1: 15x One-sided Photocard @ P5.00/card = P75.00\nVariation 2: 30x Double-sided Photocard @ P10.00/card = P300.00\n\nShipping: J&T · Luzon (outside NCR): P120.00\n\nTOTAL: P495.00\nTotal cards: 45\nTier savings: P165.00 (vs. entry-tier pricing)\nMulti-variation discount: P105.00 saved",
+      "status": "Printing",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "198",
+      "customerName": "Aki Sereño",
+      "emails": [
+        "aki.sereno5@gmail.com",
+        "aki.sereno5@gmail.con"
+      ],
+      "orderDetails": "Order for: Aki Sereño\nDate: Jun 22, 2026 · 12:09 PM\n\n-- Items --\nVariation 1: 20x One-sided Photocard @ P6.50/card = P130.00\n\nRush order (20 cards @ P2/card): P40.00\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P170.00 (cards only, courier separate)\nTotal cards: 20\nTier savings: P3.33 (vs. entry-tier pricing)",
+      "status": "Printing",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "199",
+      "customerName": "Deborrah N. Estrella",
+      "emails": [
+        "estrelladeborrah@gmail.com"
+      ],
+      "orderDetails": "170",
+      "status": "Printing",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "200",
+      "customerName": "Allysa Nicole T. Ferrer",
+      "emails": [
+        "ferrerlhay@gmail.com"
+      ],
+      "orderDetails": "Order for: Allysa Nicole T. Ferrer\nDate: Jun 22, 2026 · 04:52 PM\n\n-- Items --\nVariation 1: 15x Polaroid Print @ P6.00/card = P90.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P170.00\nTotal cards: 15",
+      "status": "Printing",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "201",
+      "customerName": "Jessie Lew M. Chung",
+      "emails": [
+        "jmchung@up.edu.ph",
+        "jessiechung4235@gmail.com"
+      ],
+      "orderDetails": "Order for: Jessie Lew M. Chung\nDate: Jun 22, 2026 · 03:28 PM\n\n-- Items --\nVariation 1: 70x Double-sided Photocard @ P10.00/card = P700.00\n   + Sleeves (70 x P1) = P70.00\nVariation 2: 40x Double-sided Photocard @ P10.00/card = P400.00\n   + Sleeves (40 x P1) = P40.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P1210.00 (cards only, courier separate)\nTotal cards: 110\nTier savings: P513.33 (vs. entry-tier pricing)\nMulti-variation discount: P40.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "202",
+      "customerName": "Julius Ed Caesar B. Santiago",
+      "emails": [
+        "jecsantiagoo@gmail.com",
+        "jecsantiago01@gmail.com"
+      ],
+      "orderDetails": "Order for: Julius Ed Caesar B. Santiago\nDate: Jun 22, 2026 · 06:18 PM\n\n-- Items --\nVariation 1: 10x One-sided Photocard @ P6.50/card = P65.00\nVariation 2: 10x One-sided Photocard @ P6.50/card = P65.00\n\nRush order (20 cards): P40.00\n   - Var 1: 10 x P2 = P20.00\n   - Var 2: 10 x P2 = P20.00\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P250.00\nTotal cards: 20\nTier savings: P3.33 (vs. entry-tier pricing)\nMulti-variation discount: P3.33 saved",
+      "status": "Printing",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "203",
+      "customerName": "Bjorn Janne Limpiada",
+      "emails": [
+        "bnlimpiada@up.edu.ph"
+      ],
+      "orderDetails": "Order for: Bjorn Janne Limpiada\nDate: Jun 22, 2026 · 09:17 PM\n\n-- Items --\nVariation 1: 80x Double-sided Photocard @ P10.00/card = P800.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P800.00 (cards only, courier separate)\nTotal cards: 80\nTier savings: P373.33 (vs. entry-tier pricing)",
+      "status": "Order and Payment Received",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "204",
+      "customerName": "Ro-Wen Franzia R. Fajardo",
+      "emails": [
+        "wenfrn@gmail.com"
+      ],
+      "orderDetails": "Order for: rowen\nDate: Jun 22, 2026 · 09:49 PM\n\n-- Items --\nVariation 1: 13x One-sided Photocard @ P6.50/card = P84.50\nVariation 2: 7x One-sided Photocard @ P6.50/card = P45.50\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P210.00\nTotal cards: 20\nTier savings: P3.33 (vs. entry-tier pricing)\nMulti-variation discount: P3.33 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "205",
+      "customerName": "Kassy Lugtu",
+      "emails": [
+        "kalachuchiee@gmail.com"
+      ],
+      "orderDetails": "Order for: Kassy Lugtu\nDate: Jun 23, 2026 · 12:30 AM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.00/card = P200.00\n   + Sleeves (40 x P1) = P40.00\nVariation 2: 15x Double-sided Photocard @ P10.00/card = P150.00\n   + Sleeves (15 x P1) = P15.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P485.00\nTotal cards: 55\nTier savings: P136.67 (vs. entry-tier pricing)\nMulti-variation discount: P90.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    }
+  ]
+}
