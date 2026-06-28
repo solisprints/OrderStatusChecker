@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrintLab · Order Status</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4gPGRlZnM+IDxsaW5lYXJHcmFkaWVudCBpZD0iYmcyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+IDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRUZCRDAiLz4gPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZGRkZEIi8+IDwvbGluZWFyR3JhZGllbnQ+IDwvZGVmcz4gPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9InVybCgjYmcyKSIvPiA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMiAzNCkgcm90YXRlKC01KSI+IDxyZWN0IHg9Ii0xMyIgeT0iLTE5IiB3aWR0aD0iMjYiIGhlaWdodD0iMzgiIHJ4PSIzLjUiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0YwODhBRSIgc3Ryb2tlLXdpZHRoPSIyLjYiLz4gPGNpcmNsZSBjeD0iMCIgY3k9Ii03IiByPSI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNGMDg4QUUiIHN0cm9rZS13aWR0aD0iMi42Ii8+IDxwYXRoIGQ9Ik0gLTEwIDE0IFEgLTEwIDIgMCAyIFEgMTAgMiAxMCAxNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjA4OEFFIiBzdHJva2Utd2lkdGg9IjIuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+IDwvZz4gPGcgZmlsbD0iI0YwODhBRSI+IDxwYXRoIGQ9Ik0gMTIgMTQgTCAxMy4yIDE3IEwgMTYgMTggTCAxMy4yIDE5IEwgMTIgMjIgTCAxMC44IDE5IEwgOCAxOCBMIDEwLjggMTcgWiIvPiA8cGF0aCBkPSJNIDUyIDQ4IEwgNTIuOCA1MCBMIDU0LjUgNTAuNSBMIDUyLjggNTEgTCA1MiA1MyBMIDUxLjIgNTEgTCA0OS41IDUwLjUgTCA1MS4yIDUwIFoiLz4gPC9nPiA8L3N2Zz4=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --paper: #fffdf8;
+    --ink: #2a1f1a;
+    --ink-soft: #6b5d54;
+    --ink-softer: #a09188;
+    --accent: #e85a8c;
+    --accent-deep: #c4356b;
+    --accent-soft: rgba(232, 90, 140, 0.1);
+    --success: #4a9d6f;
+    --success-soft: rgba(74, 157, 111, 0.12);
+    --shadow: rgba(42, 31, 26, 0.08);
+    --shadow-strong: rgba(42, 31, 26, 0.18);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(232, 90, 140, 0.08) 0%, transparent 35%),
+      radial-gradient(circle at 85% 80%, rgba(201, 184, 232, 0.12) 0%, transparent 35%),
+      radial-gradient(circle at 50% 50%, rgba(245, 217, 122, 0.06) 0%, transparent 40%);
+  }
+
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    background: var(--accent-soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  h1 .italic {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--paper);
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 24px var(--shadow), 0 1px 3px var(--shadow);
+    border: 1px solid rgba(42, 31, 26, 0.04);
+    margin-bottom: 16px;
+  }
+
+  .field { margin-bottom: 18px; }
+
+  .field-label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .field-label .req { color: var(--accent); }
+
+  .text-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg);
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .text-input:focus { border-color: var(--accent); }
+  .text-input::placeholder { color: var(--ink-softer); font-weight: 400; }
+
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: var(--accent-deep); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(232, 90, 140, 0.3); }
+  .submit-btn:active { transform: translateY(0); }
+  .submit-btn:disabled { background: var(--ink-softer); cursor: not-allowed; transform: none; box-shadow: none; }
+
+  .hint {
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 14px;
+    line-height: 1.5;
+  }
+
+  .hidden { display: none !important; }
+
+  /* Loading state */
+  .loading-dots {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .loading-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse {
+    0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+    40% { opacity: 1; transform: scale(1); }
+  }
+
+  /* Result card */
+  .result-header {
+    border-bottom: 1px solid rgba(42, 31, 26, 0.06);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  .result-order-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .result-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  /* Status timeline */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 4px;
+    margin-bottom: 28px;
+  }
+  .timeline-step {
+    display: flex;
+    gap: 14px;
+    position: relative;
+    padding-bottom: 22px;
+  }
+  .timeline-step:last-child { padding-bottom: 0; }
+
+  .timeline-dot-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid rgba(42, 31, 26, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s;
+    z-index: 1;
+  }
+  .timeline-line {
+    flex: 1;
+    width: 2px;
+    background: rgba(42, 31, 26, 0.08);
+    margin-top: 2px;
+  }
+
+  .timeline-step.done .timeline-dot {
+    background: var(--success);
+    border-color: var(--success);
+  }
+  .timeline-step.done .timeline-dot::after {
+    content: "";
+    width: 8px;
+    height: 5px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+  .timeline-step.done .timeline-line { background: var(--success); }
+
+  .timeline-step.current .timeline-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+    animation: dot-pulse 2s ease-in-out infinite;
+  }
+  @keyframes dot-pulse {
+    0%, 100% { box-shadow: 0 0 0 4px var(--accent-soft); }
+    50% { box-shadow: 0 0 0 8px rgba(232, 90, 140, 0.05); }
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding-top: 1px;
+    padding-bottom: 4px;
+  }
+  .timeline-label {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .timeline-step.pending .timeline-label { color: var(--ink-softer); font-weight: 500; }
+  .timeline-step.current .timeline-label { color: var(--accent-deep); font-weight: 700; }
+
+  .timeline-sub {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .timeline-step.current .timeline-sub { color: var(--accent-deep); opacity: 0.8; }
+  .timeline-step.pending .timeline-sub { color: var(--ink-softer); }
+
+  /* Order details */
+  .details-block {
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  .details-block:empty::before {
+    content: "(No order summary available)";
+    color: var(--ink-softer);
+    font-style: italic;
+  }
+
+  /* Tracking */
+  .tracking-block {
+    background: linear-gradient(135deg, rgba(232, 90, 140, 0.06), rgba(245, 217, 122, 0.08));
+    border: 1px solid rgba(232, 90, 140, 0.15);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+  }
+  .tracking-number-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .tracking-number {
+    flex: 1;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    word-break: break-all;
+  }
+  .copy-btn {
+    background: white;
+    border: 1px solid rgba(42, 31, 26, 0.1);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .copy-btn:hover { color: var(--accent-deep); border-color: var(--accent); }
+  .copy-btn.copied { color: var(--success); border-color: var(--success); }
+
+  .tracking-link {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent-deep);
+    padding-bottom: 1px;
+  }
+  .tracking-link:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Contact */
+  .contact-block {
+    border-top: 1px solid rgba(42, 31, 26, 0.06);
+    padding-top: 20px;
+  }
+  .contact-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .contact-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .contact-link {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--bg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .contact-link:hover {
+    background: var(--accent-soft);
+    border-color: rgba(232, 90, 140, 0.2);
+    color: var(--accent-deep);
+  }
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--accent);
+  }
+  .contact-link-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Error state */
+  .error-card { text-align: center; }
+  .error-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: rgba(232, 90, 140, 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  .error-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .error-body {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 18px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .try-again-btn {
+    background: transparent;
+    color: var(--accent-deep);
+    border: 1px solid var(--accent);
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .try-again-btn:hover { background: var(--accent-soft); }
+
+  /* Status banner notice */
+  .notice {
+    background: rgba(245, 217, 122, 0.15);
+    border: 1px solid rgba(217, 173, 80, 0.2);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .notice strong { color: var(--ink); font-weight: 600; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.05em;
+    color: var(--ink-softer);
+  }
+  .footer .heart { color: var(--accent); }
+
+  /* Skeleton (initial load) */
+  .skeleton-card { animation: skeleton-pulse 1.6s ease-in-out infinite; }
+  @keyframes skeleton-pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+  @media (max-width: 480px) {
+    body { padding: 22px 14px 50px; }
+    h1 { font-size: 36px; }
+    .card { padding: 24px 20px; }
+    .result-name { font-size: 21px; }
+    .contact-row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">PrintLab · Order Status</span>
+      <h1>check your <span class="italic">order</span></h1>
+      <p class="subtitle">Enter your order number and email to see where your photocards are at right now.</p>
+    </div>
+
+    <!-- Data load error -->
+    <div class="card error-card hidden" id="dataErrorCard">
+      <div class="error-icon">!</div>
+      <div class="error-title">Hang tight — syncing</div>
+      <div class="error-body">We couldn't load today's order data yet. This usually means we're still doing our nightly update. Please try again in a few minutes.</div>
+    </div>
+
+    <!-- Lookup card -->
+    <div class="card lookup-card" id="lookupCard">
+      <div class="field">
+        <label class="field-label" for="orderNum">Order Number <span class="req">*</span></label>
+        <input class="text-input" id="orderNum" placeholder="e.g. 145" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label class="field-label" for="email">Email <span class="req">*</span></label>
+        <input class="text-input" id="email" placeholder="the email you used to order" type="email" autocomplete="email" />
+      </div>
+      <button class="submit-btn" id="lookupBtn">Check Status</button>
+      <div class="hint">Use the order number we sent in your confirmation and the email you ordered with.</div>
+    </div>
+
+    <!-- Result card -->
+    <div class="card result-card hidden" id="resultCard"></div>
+
+    <!-- Not found card -->
+    <div class="card error-card hidden" id="notFoundCard">
+      <div class="error-icon">?</div>
+      <div class="error-title">We couldn't find that order</div>
+      <div class="error-body">Double-check your order number and email, then try again. If you're sure they're right, message us and we'll sort it out right away.</div>
+      <button class="try-again-btn" id="tryAgainBtn">Try Again</button>
+    </div>
+
+    <div class="footer">
+      Made with <span class="heart">♥</span> by PrintLab · Last synced <span id="lastSync">—</span>
+    </div>
+  </div>
+
+<script>
+  // ============ CONFIG ============
+  const CONTACT_EMAIL = 'printlab.solis@gmail.com';
+  const CONTACT_FB = 'https://www.facebook.com/profile.php?id=61578627848464';
+
+  // Status stages, in order. The third stage's label is courier-dependent.
+  const STAGES = [
+    {
+      key: 'received',
+      label: 'Order & Payment Received',
+      sub: "We've got your order and confirmed your payment."
+    },
+    {
+      key: 'printing',
+      label: 'Printing',
+      sub: 'Your photocards are being printed and finished.'
+    },
+    {
+      key: 'preparing',
+      label: 'Preparing to Ship',
+      sub: 'Your photocards are printed and being packed up for handoff to the courier.'
+    },
+    {
+      key: 'fulfillment',
+      // Label set dynamically based on courier
+      labelJT: 'Shipped via J&T',
+      labelOwn: 'Ready for Pick Up',
+      subJT: "Your J&T tracking number is below — you can track it on the J&T website.",
+      subOwn: "Your order is ready for your courier to pick up."
+    },
+    {
+      key: 'completed',
+      label: 'Order Completed',
+      sub: 'Delivered! Thank you for ordering with PrintLab 💌'
+    }
+  ];
+
+  // ============ STATE ============
+  let ordersData = null;
+  let dataLoadFailed = false;
+
+  // ============ DATA LOAD ============
+  async function loadData() {
+    try {
+      // Cache-bust so customers always see the latest after a sync
+      const res = await fetch('./data.json?ts=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      ordersData = await res.json();
+      const sync = ordersData.lastUpdated;
+      if (sync) {
+        const d = new Date(sync);
+        if (!isNaN(d)) {
+          document.getElementById('lastSync').textContent = d.toLocaleString('en-PH', {
+            year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'
+          });
+        } else {
+          document.getElementById('lastSync').textContent = sync;
+        }
+      }
+    } catch (e) {
+      console.error('Failed to load data.json:', e);
+      dataLoadFailed = true;
+      document.getElementById('dataErrorCard').classList.remove('hidden');
+      document.getElementById('lookupCard').classList.add('hidden');
+    }
+  }
+
+  // ============ STATUS MATCHING ============
+  // Map any incoming status string to a stage index (0-4).
+  function getStageIndex(rawStatus) {
+    const s = (rawStatus || '').toLowerCase().trim();
+    if (!s) return 0;
+    if (s.includes('complete')) return 4;
+    // Check "preparing" before the ship/ready check below: "Preparing to Ship"
+    // contains the substring "ship" and would otherwise match the fulfillment stage.
+    if (s.includes('prepar')) return 2;
+    if (s.includes('pick') || s.includes('shipped') || s.includes('ship') || s.includes('ready')) return 3;
+    if (s.includes('print')) return 1;
+    if (s.includes('received') || s.includes('payment') || s.includes('paid') || s.includes('confirm')) return 0;
+    // Default to step 0 if we can't recognize the value
+    return 0;
+  }
+
+  function isJT(courier) {
+    const c = (courier || '').toLowerCase();
+    return c.includes('j&t') || c.includes('jt') || c.includes('j and t') || c.includes('shipped');
+  }
+
+  // ============ LOOKUP ============
+  function findOrder(orderNum, email) {
+    if (!ordersData || !ordersData.orders) return null;
+    const num = String(orderNum).trim().replace(/^#/, '').replace(/\.0$/, '').toLowerCase();
+    const em = String(email).trim().toLowerCase();
+    return ordersData.orders.find(o => {
+      const oNum = String(o.orderNumber).trim().toLowerCase();
+      if (oNum !== num) return false;
+      const emails = (o.emails || []).map(e => String(e).trim().toLowerCase());
+      return emails.includes(em);
+    }) || null;
+  }
+
+  // ============ RENDER ============
+  function escapeHtml(s) {
+    return String(s || '').replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+
+  function renderResult(order) {
+    const stageIdx = getStageIndex(order.status);
+    const jt = isJT(order.courier);
+
+    // Build the timeline HTML
+    const timelineHtml = STAGES.map((stage, i) => {
+      let label = stage.label;
+      let sub = stage.sub;
+      if (stage.key === 'fulfillment') {
+        label = jt ? stage.labelJT : stage.labelOwn;
+        sub = jt ? stage.subJT : stage.subOwn;
+      }
+      let stateClass = '';
+      if (i < stageIdx) stateClass = 'done';
+      else if (i === stageIdx) stateClass = 'current';
+      else stateClass = 'pending';
+
+      const isLast = i === STAGES.length - 1;
+      return `
+        <div class="timeline-step ${stateClass}">
+          <div class="timeline-dot-wrap">
+            <div class="timeline-dot"></div>
+            ${!isLast ? '<div class="timeline-line"></div>' : ''}
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-label">${escapeHtml(label)}</div>
+            <div class="timeline-sub">${escapeHtml(sub)}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Tracking number block (only for J&T with a tracking #)
+    let trackingHtml = '';
+    if (jt && order.trackingNumber) {
+      trackingHtml = `
+        <div class="section-label">Tracking Number</div>
+        <div class="tracking-block">
+          <div class="tracking-number-row">
+            <div class="tracking-number" id="trackingNum">${escapeHtml(order.trackingNumber)}</div>
+            <button class="copy-btn" onclick="copyTracking(this, '${escapeHtml(order.trackingNumber)}')">Copy</button>
+          </div>
+          <a href="https://www.jtexpress.ph/index/query/gzquery.html" target="_blank" rel="noopener" class="tracking-link">Track on J&amp;T →</a>
+        </div>
+      `;
+    } else if (jt && !order.trackingNumber) {
+      // J&T but no tracking yet
+      trackingHtml = `
+        <div class="section-label">Tracking Number</div>
+        <div class="notice"><strong>Not yet assigned.</strong> Your J&amp;T tracking number will appear here once your parcel has been booked and shipped.</div>
+      `;
+    }
+
+    // Order details block
+    let detailsHtml = '';
+    if (order.orderDetails && order.orderDetails.trim()) {
+      detailsHtml = `
+        <div class="section-label">Order Details</div>
+        <div class="details-block">${escapeHtml(order.orderDetails)}</div>
+      `;
+    }
+
+    const card = document.getElementById('resultCard');
+    card.innerHTML = `
+      <div class="result-header">
+        <div class="result-order-tag">Order #${escapeHtml(order.orderNumber)}</div>
+        <div class="result-name">${escapeHtml(order.customerName || 'Your Order')}</div>
+      </div>
+
+      <div class="section-label">Status</div>
+      <div class="timeline">${timelineHtml}</div>
+
+      ${trackingHtml}
+      ${detailsHtml}
+
+      <div class="contact-block">
+        <div class="contact-title">Need to ask something?</div>
+        <div class="contact-row">
+          <a href="mailto:${CONTACT_EMAIL}" class="contact-link" title="${CONTACT_EMAIL}">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span class="contact-link-text">Email us</span>
+          </a>
+          <a href="${CONTACT_FB}" target="_blank" rel="noopener" class="contact-link">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            <span class="contact-link-text">Message on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <button class="try-again-btn" style="margin: 22px auto 0; display: block;" onclick="resetLookup()">Check Another Order</button>
+    `;
+    card.classList.remove('hidden');
+    document.getElementById('lookupCard').classList.add('hidden');
+    document.getElementById('notFoundCard').classList.add('hidden');
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function showNotFound() {
+    document.getElementById('notFoundCard').classList.remove('hidden');
+    document.getElementById('resultCard').classList.add('hidden');
+  }
+
+  function resetLookup() {
+    document.getElementById('resultCard').classList.add('hidden');
+    document.getElementById('notFoundCard').classList.add('hidden');
+    document.getElementById('lookupCard').classList.remove('hidden');
+    document.getElementById('orderNum').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('orderNum').focus();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function copyTracking(btn, num) {
+    const doCopy = (text) => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      return Promise.resolve();
+    };
+    doCopy(num).then(() => {
+      btn.textContent = 'Copied ✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 1800);
+    });
+  }
+  // Expose for inline onclick handlers
+  window.copyTracking = copyTracking;
+  window.resetLookup = resetLookup;
+
+  // ============ FORM HANDLER ============
+  async function handleLookup() {
+    const btn = document.getElementById('lookupBtn');
+    const orderInput = document.getElementById('orderNum');
+    const emailInput = document.getElementById('email');
+    const orderNum = orderInput.value.trim();
+    const email = emailInput.value.trim();
+
+    // Clear previous error styling
+    orderInput.style.borderColor = '';
+    emailInput.style.borderColor = '';
+
+    if (!orderNum) {
+      orderInput.style.borderColor = 'var(--accent)';
+      orderInput.focus();
+      return;
+    }
+    if (!email) {
+      emailInput.style.borderColor = 'var(--accent)';
+      emailInput.focus();
+      return;
+    }
+
+    if (dataLoadFailed || !ordersData) {
+      // Try once more
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span>';
+      await loadData();
+      btn.disabled = false;
+      btn.textContent = 'Check Status';
+      if (dataLoadFailed) return;
+    }
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span>';
+
+    // Tiny artificial delay so it feels considered, not instant
+    setTimeout(() => {
+      const order = findOrder(orderNum, email);
+      btn.disabled = false;
+      btn.textContent = 'Check Status';
+      if (order) {
+        renderResult(order);
+      } else {
+        showNotFound();
+      }
+    }, 350);
+  }
+
+  // ============ INIT ============
+  document.addEventListener('DOMContentLoaded', () => {
+    loadData();
+    document.getElementById('lookupBtn').addEventListener('click', handleLookup);
+    document.getElementById('tryAgainBtn').addEventListener('click', () => {
+      document.getElementById('notFoundCard').classList.add('hidden');
+      document.getElementById('lookupCard').classList.remove('hidden');
+      document.getElementById('orderNum').focus();
+    });
+    // Allow Enter to submit
+    ['orderNum', 'email'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); handleLookup(); }
+      });
+    });
+  });
+</script>
+</body>
+</html>
