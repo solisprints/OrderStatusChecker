@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-07-09T17:42:19.957Z",
-  "orderCount": 144,
+  "lastUpdated": "2026-07-10T17:10:00.214Z",
+  "orderCount": 148,
   "orders": [
     {
       "orderNumber": "144",
@@ -1258,7 +1258,7 @@
         "rinakathhh@gmail.com"
       ],
       "orderDetails": "Order for: Kathrina Doroneo\nDate: Jul 6, 2026 · 10:47 AM\n\n-- Items --\nVariation 1: 20x One-sided Photocard @ P5.50/card = P110.00\nVariation 2: 20x One-sided Photocard @ P5.50/card = P110.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P300.00\nTotal cards: 40\nTier savings: P46.67 (vs. entry-tier pricing)\nMulti-variation discount: P40.00 saved",
-      "status": "Shipped",
+      "status": "Order Completed",
       "courier": "J&T",
       "trackingNumber": "JT0020717216474"
     },
@@ -1280,7 +1280,7 @@
         "capilieunicedionne@gmail.com"
       ],
       "orderDetails": "220 + 80",
-      "status": "Shipped",
+      "status": "Order Completed",
       "courier": "J&T",
       "trackingNumber": "JT0020717819622"
     },
@@ -1324,7 +1324,7 @@
         "breevangelie9804@gmail.com"
       ],
       "orderDetails": "Order for: Breanna Angelie Seares Bonalba\nDate: Jul 6, 2026 · 10:38 PM\n\n-- Items --\nVariation 1: 50x Double-sided Photocard @ P10.00/card = P500.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P580.00\nTotal cards: 50\nTier savings: P233.33 (vs. entry-tier pricing)",
-      "status": "Shipped",
+      "status": "Order Completed",
       "courier": "J&T",
       "trackingNumber": "JT0020718314125"
     },
@@ -1346,9 +1346,9 @@
         "garciajirehvanrjndt@gmail.com"
       ],
       "orderDetails": "Order for: Andrei Klein Inocencio\nDate: Jul 7, 2026 · 10:06 AM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P10.00/card = P150.00\nVariation 2: 40x Double-sided Photocard @ P10.00/card = P400.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P630.00\nTotal cards: 55\nTier savings: P256.67 (vs. entry-tier pricing)\nMulti-variation discount: P110.00 saved",
-      "status": "Preparing to Ship",
+      "status": "Shipped",
       "courier": "J&T",
-      "trackingNumber": null
+      "trackingNumber": "JT0020741353177"
     },
     {
       "orderNumber": "265",
@@ -1368,9 +1368,9 @@
         "karen.louise.a.oliveros@gmail.com"
       ],
       "orderDetails": "Order for: Karen\nDate: Jul 7, 2026 · 01:33 PM\n\n-- Items --\nVariation 1: 15x One-sided Photocard @ P6.00/card = P90.00\n   + Sleeves (15 x P1) = P15.00\nVariation 2: 15x One-sided Photocard @ P6.00/card = P90.00\n   + Sleeves (15 x P1) = P15.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P290.00\nTotal cards: 30\nTier savings: P20.00 (vs. entry-tier pricing)\nMulti-variation discount: P20.00 saved",
-      "status": "Preparing to Ship",
+      "status": "Shipped",
       "courier": "J&T",
-      "trackingNumber": null
+      "trackingNumber": "JT0020767609921"
     },
     {
       "orderNumber": "267",
@@ -1456,7 +1456,7 @@
         "preciousj.paycana@gmail.com"
       ],
       "orderDetails": "Order for: Precious Paycana\nDate: Jul 8, 2026 · 08:59 AM\n\n-- Items --\nVariation 1: 10x Double-sided Photocard @ P11.00/card = P110.00\nVariation 2: 15x Double-sided Photocard @ P11.00/card = P165.00\nVariation 3: 10x Double-sided Photocard @ P11.00/card = P110.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P385.00 (cards only, courier separate)\nTotal cards: 35\nTier savings: P128.33 (vs. entry-tier pricing)\nMulti-variation discount: P128.33 saved",
-      "status": "Ready for Pick Up",
+      "status": "Order Completed",
       "courier": "Own",
       "trackingNumber": null
     },
@@ -1489,7 +1489,7 @@
         "preciousj.paycana@gmail.com"
       ],
       "orderDetails": "Order for: Precious Paycana\nDate: Jul 8, 2026 · 12:20 PM\n\n-- Items --\nVariation 1: 10x One-sided Photocard @ P6.00/card = P60.00\nVariation 2: 10x One-sided Photocard @ P6.00/card = P60.00\nVariation 3: 10x One-sided Photocard @ P6.00/card = P60.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P260.00\nTotal cards: 30\nTier savings: P20.00 (vs. entry-tier pricing)\nMulti-variation discount: P20.00 saved",
-      "status": "Ready for Pick Up",
+      "status": "Order Completed",
       "courier": "Own",
       "trackingNumber": null
     },
@@ -1555,9 +1555,9 @@
         "bejeymanzano01@gmail.com"
       ],
       "orderDetails": "Order for: Buenaford Jr. D. Manzano\nDate: Jul 9, 2026 · 01:21 PM\n\n-- Items --\nVariation 1: 30x Double-sided Photocard @ P12.67/card = P380.00\n   + Sleeves (30 x P1) = P30.00\n\nRush order (30 cards @ P3/card): P90.00\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P580.00\nTotal cards: 30\nTier savings: P60.00 (vs. entry-tier pricing)",
-      "status": "Preparing to Ship",
+      "status": "Shipped",
       "courier": "J&T",
-      "trackingNumber": null
+      "trackingNumber": "JT0020766140495"
     },
     {
       "orderNumber": "285",
@@ -1577,7 +1577,7 @@
         "chenri1318@gmail.com"
       ],
       "orderDetails": "Order for: Fidel Henri Gallen\nDate: Jul 8, 2026 · 11:35 PM\n\n-- Items --\nVariation 1: 50x Double-sided Photocard @ P10.00/card = P500.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P580.00\nTotal cards: 50\nTier savings: P233.33 (vs. entry-tier pricing)",
-      "status": "Order and Payment Received",
+      "status": "Preparing to Ship",
       "courier": "J&T",
       "trackingNumber": null
     },
@@ -1599,6 +1599,51 @@
         "jarredlim0105@gmail.com"
       ],
       "orderDetails": "Order for: Jarred Marthie Lim\nDate: Jul 9, 2026 · 10:46 PM\n\n-- Items --\nVariation 1: 30x Double-sided Photocard @ P12.67/card = P380.00\n   + Sleeves (30 x P1) = P30.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P490.00\nTotal cards: 30\nTier savings: P60.00 (vs. entry-tier pricing)",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "289",
+      "customerName": "Jewelmee Garcia",
+      "emails": [
+        "jewelmeegarcia123@gmail.com"
+      ],
+      "orderDetails": "Order for: Jewelmee Garcia\nDate: Jul 9, 2026 · 04:03 PM\n\n-- Items --\nVariation 1: 20x Standard Grad Print @ P4.50/card = P90.00\nVariation 2: 7x Double-sided Photocard @ P11.00/card = P77.00\nVariation 3: 8x Double-sided Photocard @ P11.00/card = P88.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P335.00\nTotal cards: 35\nTier savings: P85.00 (vs. entry-tier pricing)\nMulti-variation discount: P75.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "290",
+      "customerName": "Bea Rose Alyannah A. Leanda",
+      "emails": [
+        "leanda.beaa@gmail.com"
+      ],
+      "orderDetails": "TOTAL: P930.00\nTotal cards: 80\nTier savings: P373.33 (vs. entry-tier pricing)\nMulti-variation discount: P80.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "291",
+      "customerName": "Ronnia Allysa Irasusta",
+      "emails": [
+        "allysairasusta@gmail.com",
+        "iallysa6104@gmail.com"
+      ],
+      "orderDetails": "Order for: Ronnia Allysa Irasusta\nDate: Jul 10, 2026 · 06:54 PM\n\n-- Items --\nVariation 1: 25x Standard Grad Print @ P4.50/card = P112.50\nVariation 2: 15x Standard Grad Print @ P4.50/card = P67.50\n\nRush order (40 cards): P40.00\n   - Var 1: 25 x P1 = P25.00\n   - Var 2: 15 x P1 = P15.00\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P300.00\nTotal cards: 40\nTier savings: P60.00 (vs. entry-tier pricing)\nMulti-variation discount: P35.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "292",
+      "customerName": "Joberson Panisigan",
+      "emails": [
+        "pjoberson04@gmail.com"
+      ],
+      "orderDetails": "Order for: Joberson Panisigan\nDate: Jul 10, 2026 · 07:27 PM\n\n-- Items --\nVariation 1: 20x One-sided Photocard @ P6.50/card = P130.00\n   + Sleeves (20 x P1) = P20.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P230.00\nTotal cards: 20\nTier savings: P3.33 (vs. entry-tier pricing)",
       "status": "Order and Payment Received",
       "courier": "J&T",
       "trackingNumber": null
