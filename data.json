@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-05T12:13:13.139Z",
-  "orderCount": 219,
+  "lastUpdated": "2026-08-05T15:43:41.967Z",
+  "orderCount": 220,
   "orders": [
     {
       "orderNumber": "144",
@@ -2438,6 +2438,17 @@
       "orderDetails": "Order for: laila tonogbanua\nDate: Aug 5, 2026 · 03:35 PM\n\n-- Items --\nVariation 1: 40x One-sided Photocard @ P5.50/card = P220.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P220.00 (cards only, courier separate)\nTotal cards: 40\nTier savings: P46.67 (vs. entry-tier pricing)",
       "status": "Printing",
       "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "365",
+      "customerName": "Kieth Carbonel",
+      "emails": [
+        "kiethcarbonel8@gmail.com"
+      ],
+      "orderDetails": "Order for: kieth carbonel\nDate: Aug 5, 2026 · 10:51 PM\n\n-- Items --\nVariation 1: 15x Double-sided Photocard @ P12.67/card = P190.00\nVariation 2: 15x Double-sided Photocard @ P12.67/card = P190.00\n\nShipping: J&T · Metro Manila: P80.00\n\nTOTAL: P460.00\nTotal cards: 30\nTier savings: P60.00 (vs. entry-tier pricing)\nMulti-variation discount: P60.00 saved",
+      "status": "Order and Payment Received",
+      "courier": "J&T",
       "trackingNumber": null
     }
   ]
