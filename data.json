@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-07T07:29:25.525Z",
-  "orderCount": 221,
+  "lastUpdated": "2026-08-07T12:37:07.956Z",
+  "orderCount": 222,
   "orders": [
     {
       "orderNumber": "144",
@@ -2458,6 +2458,17 @@
         "mariaisabelapena28@gmail.com"
       ],
       "orderDetails": "Order for: isabela\nDate: Aug 7, 2026 · 02:59 PM\n\n-- Items --\nVariation 1: 10x One-sided Photocard @ P6.50/card = P65.00\n   + Sleeves (10 x P1) = P10.00\nVariation 2: 10x One-sided Photocard @ P6.50/card = P65.00\n   + Sleeves (10 x P1) = P10.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P150.00 (cards only, courier separate)\nTotal cards: 20\nTier savings: P3.33 (vs. entry-tier pricing)\nMulti-variation discount: P3.33 saved",
+      "status": "Order and Payment Received",
+      "courier": "Own",
+      "trackingNumber": null
+    },
+    {
+      "orderNumber": "367",
+      "customerName": "Carla Denise Santiago",
+      "emails": [
+        "carladenisesantiago@gmail.com"
+      ],
+      "orderDetails": "Order for: Carla Denise Santiago\nDate: Aug 7, 2026 · 03:53 PM\n\n-- Items --\nVariation 1: 15x Standard Grad Print @ P4.50/card = P67.50\nVariation 2: 15x Standard Grad Print @ P4.50/card = P67.50\nVariation 3: 10x One-sided Photocard @ P5.50/card = P55.00\n\nShipping: Lalamove / Grab / Angkas (paid on booking)\n\nTOTAL: P190.00 (cards only, courier separate)\nTotal cards: 40\nTier savings: P56.67 (vs. entry-tier pricing)\nMulti-variation discount: P56.67 saved",
       "status": "Order and Payment Received",
       "courier": "Own",
       "trackingNumber": null
